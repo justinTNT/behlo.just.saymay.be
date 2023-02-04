@@ -38,9 +38,6 @@ trackSelection =
 view : Volume -> Html msg
 view volume =
     let
-        _ =
-            Debug.log "volume" volume
-
         classNameStr =
             case volume.trax of
                 _ :: [] ->
@@ -62,9 +59,6 @@ view volume =
             let
                 url =
                     myReplace "[^/]*.mp3" (\_ -> volume.tag ++ ".jpg") track.url
-
-                _ =
-                    Debug.log "url" url
             in
             Html.div
                 [ class "song"
