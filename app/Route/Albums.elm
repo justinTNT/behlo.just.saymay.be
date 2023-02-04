@@ -127,7 +127,7 @@ head _ =
         { canonicalUrlOverride = Nothing
         , siteName = "just.saymay.be"
         , image =
-            { url = Pages.Url.external "TODO"
+            { url = Pages.Url.external "https://s3.ap-southeast-2.amazonaws.com/dphon.es/homebrew/coattails/iraq.jpg"
             , alt = "Behlo"
             , dimensions = Nothing
             , mimeType = Nothing
@@ -163,7 +163,7 @@ view _ _ static =
                     ]
                 ]
     in
-    { title = "DJ Dope Inc."
+    { title = "Behlo"
     , body =
         [ Html.div [ attribute "style" "padding-left: 2em" ]
             (Html.h2 [ attribute "style" "margin-left: 2em" ] [ Html.text "Behlo" ]

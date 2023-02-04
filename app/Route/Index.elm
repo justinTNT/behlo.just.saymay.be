@@ -136,12 +136,12 @@ head static =
         { canonicalUrlOverride = Nothing
         , siteName = "Behlo"
         , image =
-            { url = Pages.Url.external "TODO"
+            { url = Pages.Url.external "https://s3.ap-southeast-2.amazonaws.com/dphon.es/homebrew/coattails/iraq.jpg"
             , alt = "Behlo logo"
             , dimensions = Nothing
             , mimeType = Nothing
             }
-        , description = "album by Behlo."
+        , description = "Behlo - aussie electronicaNT"
         , locale = Nothing
         , title = static.data.name
         }
@@ -155,6 +155,6 @@ view :
     -> StaticPayload Data ActionData RouteParams
     -> View (Pages.Msg.Msg Msg)
 view maybeUrl sharedModel model static =
-    { title = "DJ Dope Inc. " ++ static.data.name
+    { title = "Behlo - " ++ static.data.name
     , body = [ AlbumRenderer.view static.data ]
     }

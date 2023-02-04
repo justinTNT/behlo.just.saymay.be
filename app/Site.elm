@@ -63,7 +63,7 @@ manifest static =
 
 tagline : String
 tagline =
-    "collecting the mixen of DJ Dope Inc."
+    "collecting the trax of Behlo"
 
 
 webp : MimeType.MimeImage
