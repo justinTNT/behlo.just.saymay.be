@@ -42,7 +42,7 @@ head =
 
 canonicalUrl : String
 canonicalUrl =
-    "https://comefile.me"
+    "https://just.saymay.be"
 
 
 manifest : Data -> Manifest.Config
