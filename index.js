@@ -5,7 +5,7 @@ const toSong = volume => track => {
     name          : track.title,
     artist        : "Behlo",
     album         : volume.title,
-    url           : track.url,
+    url           : track.url + "?v=" + (new Date()),
     cover_art_url : track.url.replace(/[^/]*.mp3/, `${volume.tag}.jpg`)
   };
 };
@@ -26,6 +26,8 @@ export default {
           if (anode) {
             Amplitude.pause();
             anode.context.close().then(() => {
+                  Amplitude.init(initObj);
+            }).catch(() => {
                   Amplitude.init(initObj);
             });
           } else {
