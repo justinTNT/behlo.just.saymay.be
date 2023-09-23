@@ -22,16 +22,19 @@ export default {
                 },
                 volume: 100,
               };
+
           let anode = Amplitude.getAnalyser();
           if (anode) {
             Amplitude.pause();
-            anode.context.close().then(() => {
-                  Amplitude.init(initObj);
-            }).catch(() => {
-                  Amplitude.init(initObj);
-            });
+            anode.context.close().finally(() => {
+                Amplitude.bindNewElements();
+                Amplitude.init(initObj);
+                if (/chrome/i.test( navigator.userAgent )) {
+                    window.location.reload();
+                }
+        });
           } else {
-                  Amplitude.init(initObj);
+               Amplitude.init(initObj);
           }
       });
   },
